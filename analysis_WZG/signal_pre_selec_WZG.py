@@ -197,7 +197,7 @@ for sample in the_list:
         lep_pairs_pt = lep_pairs_z.i0.pt - lep_pairs_z.i1.pt
 
         lep_z_1 = ak.where(lep_pairs_pt > 0, lep_pairs_z.i0, lep_pairs_z.i1)
-        lep_z_2 = ak.where(lep_pairs_pt > 0, lep_pairs_z.i1, lep_pairs_z.i0)
+        lep_z_2 = ak.where(lep_pairs_pt < 0, lep_pairs_z.i0, lep_pairs_z.i1)
 
 
 
@@ -359,7 +359,7 @@ for sample in the_list:
 
 print("NPZ 파일 저장 시작")
 
-output_directory = "/u/user/ab0633/WZG_ProcessedData"
+output_directory = "/u/user/ab0633/WZG_ProcessedData/test"
 os.makedirs(output_directory, exist_ok=True)
 
 for ch_name in collected_data.keys():
