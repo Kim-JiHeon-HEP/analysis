@@ -1,0 +1,14 @@
+universe                = vanilla
+executable              = run_WZG_ver3.sh
+arguments               = $(process) $(subdir)
+output                  = /u/user/ab0633/WZG_ProcessedData_20_15/logs/condor_out_$(process)_$(subdir).out
+error                   = /u/user/ab0633/WZG_ProcessedData_20_15/logs/condor_error_$(process)_$(subdir).err
+log                     = /u/user/ab0633/WZG_ProcessedData_20_15/logs/condor_log_$(process)_$(subdir).log
+
+should_transfer_files   = Yes
+
+request_memory          = 8 GB
+request_cpus            = 1
+request_disk            = 5 GB 
+
+queue process, subdir from (WW Eighth)

@@ -360,7 +360,7 @@ if __name__ == "__main__":
   
     print("\nSaving results =====")
 
-    output_directory = f"/u/user/ab0633/WZG_ProcessedData/{process}"
+    output_directory = f"/u/user/ab0633/WZG_ProcessedData_20_15/{process}"
     os.makedirs(output_directory, exist_ok=True)
 
     saved_count = 0
